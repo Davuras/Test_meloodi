@@ -1264,9 +1264,9 @@ function synthPiano(freq, duration, volume, startTime) {
   const totalEnd = sustainEnd + releaseTime;
 
   masterGain.gain.setValueAtTime(0, startTime);
-  masterGain.gain.linearRampToValueAtTime(volume * 0.38, startTime + 0.004);
+  masterGain.gain.linearRampToValueAtTime(volume * 0.18, startTime + 0.004);
   // Hold at full level while key is "down"
-  masterGain.gain.setValueAtTime(volume * 0.38, sustainEnd);
+  masterGain.gain.setValueAtTime(volume * 0.18, sustainEnd);
   // Then decay away naturally
   masterGain.gain.exponentialRampToValueAtTime(0.0001, totalEnd);
 
